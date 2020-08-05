@@ -6,14 +6,14 @@ clean_qvals <- function(d) {
   print(head(d))
   
   # Fix zeros
-  d[d$X712.PV.PFC_fdrDonut == 0, "X712.PV.PFC_fdrDonut"] = 1.0e-42
-  d[d$X931.PV.PFC_fdrDonut == 0, "X931.PV.PFC_fdrDonut"] = 1.0e-42
+  d[d$GH_fdrDonut == 0, "GH_fdrDonut"] = 1.0e-42
+  d[d$jSI_fdrDonut == 0, "jSI_fdrDonut"] = 1.0e-42
 
   print(head(d))
 
   # Change q values to log10(qvals)
-  d$X712.PV.PFC_fdrDonut <- log10(d$X712.PV.PFC_fdrDonut)
-  d$X931.PV.PFC_fdrDonut <- log10(d$X931.PV.PFC_fdrDonut)
+  d$GH_fdrDonut <- log10(d$GH_fdrDonut)
+  d$jSI_fdrDonut <- log10(d$jSI_fdrDonut)
   print(head(d))
   
   # Remove duplicates
