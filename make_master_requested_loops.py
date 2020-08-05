@@ -22,7 +22,7 @@ def add_qvals(line, F):
 	# Coordinates [chr1, x1, x2, chr2, y1, y2]
 	coord = line.split('\t')[:6]
 	qvals = []
-	for cell in ['712-PV-PFC', '931-PV-PFC']:
+	for cell in ['GH', 'jSI']:
 		found = False
 		REQ = open(cell + '/10kb/requested_list_' + str(res), 'r')
 		for reqline in REQ:
